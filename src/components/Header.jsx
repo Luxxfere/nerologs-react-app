@@ -2,7 +2,7 @@ const Header = () => {
     return(
         <header>
             <h1>Nekrologi online</h1>
-            <p>Ogólno polska baza nekrologów</p>
+            <p>Ogólnopolska baza nekrologów</p>
         </header>
     )
 }

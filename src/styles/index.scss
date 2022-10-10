@@ -9,8 +9,8 @@ body {
 
   header {
     height: 70vh;
-    width: 100vw;
-    background-image: url(img/graveyard.jpeg);
+    width: 100%;
+    background-image: url('../assets/img/graveyard.jpeg');
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -25,6 +25,10 @@ body {
       font-weight: 800;
       color: #fff;
       margin: 0;
+
+      @media (max-width: 998px) {
+        font-size: 10vw;
+      }
     }
 
     p {
@@ -32,6 +36,9 @@ body {
       font-weight: 600;
       color: #fff;
       margin: 0;
+      @media (max-width: 998px) {
+        font-size: 4vw;
+      }
     }
   }
 
@@ -48,6 +55,10 @@ body {
       justify-content: center;
       align-items: center;
       gap: 50px;
+
+      @media (max-width: 998px) {
+        flex-direction: column;
+      }
 
       .customInput {
         label {
@@ -73,6 +84,7 @@ body {
         color: #fff;
         border-radius: 0;
         border: 2px solid #000;
+        cursor: pointer;
         transition: 0.3s;
 
         &:hover {
@@ -87,16 +99,32 @@ body {
     display: grid;
     gap: 70px 40px;
     grid-template-columns: repeat(2, 1fr);
-    max-width: 1300px;
+    max-width: 80%;
     margin: auto;
+
+    @media (max-width: 998px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
 
     .nekrolog {
       border: 15px double #000;
       outline: 15px solid #000;
       padding: 30px;
       text-align: center;
-      width: 500px;
+      width: calc(80% - 15px);
       margin: auto;
+
+      .candle {
+        cursor: pointer;
+        height: 50px;
+        display: block;
+        margin: 10px auto;
+        filter: grayscale(80%);
+
+        &.lighted {
+          filter: drop-shadow(0 0 20px red);
+        }
+      }
     }
   }
 }
